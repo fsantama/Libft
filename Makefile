@@ -6,7 +6,7 @@
 #    By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 09:54:51 by fsantama          #+#    #+#              #
-#    Updated: 2023/01/09 16:43:44 by fsantama         ###   ########.fr        #
+#    Updated: 2023/05/30 14:34:46 by fsantama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,21 +63,27 @@ OBJS := $(SRC:.c=.o)
 
 BNS_OBJS := $(BNS_SRC:.c=.o)
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(SRC)
-	ar rcs $(NAME) $(OBJS)
+$(NAME) : $(SRC)
+	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	@printf "\e[32m$@ built🗣\e[0m\n"
+
+%.o : %.c
+	@$(CC) $(CFLAGS) $< -c
 
 all: $(NAME)
 
 bonus: $(NAME)
 	$(CC) $(CFLAGS) -c $(BNS_SRC)
 	ar rcs $(NAME) $(BNS_OBJS)
+	@printf "\e[32m$(NAME) $@ built🗣\e[0m\n"
 
 clean:
 	$(CLEAN) $(OBJS) $(BNS_OBJS)
+	@printf "\e[31m$(NAME) objects clean done\e[0m\n"
 
-fclean: clean
+fclean:
 	$(CLEAN) $(NAME)
+	@printf "\e[31m$(NAME) clean done\e[0m\n"
 
 re: fclean all
 
