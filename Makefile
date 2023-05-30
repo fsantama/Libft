@@ -6,7 +6,7 @@
 #    By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 09:54:51 by fsantama          #+#    #+#              #
-#    Updated: 2023/05/30 14:34:46 by fsantama         ###   ########.fr        #
+#    Updated: 2023/05/30 14:39:19 by fsantama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ OBJS := $(SRC:.c=.o)
 BNS_OBJS := $(BNS_SRC:.c=.o)
 
 $(NAME) : $(SRC)
-	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	@$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 	@printf "\e[32m$@ built🗣\e[0m\n"
 
 %.o : %.c
