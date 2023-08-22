@@ -3,15 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantama <fsantama@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:35:38 by fsantama          #+#    #+#             */
-/*   Updated: 2022/12/14 13:34:46 by fsantama         ###   ########.fr       */
+/*   Updated: 2023/08/22 18:18:58 by fsantama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Concatenate two strings into a new string.
+ *
+ * This function concatenates the strings 's1' and 's2' into a new string.
+ * Memory is allocated for the new string, which contains the concatenated 
+ * content of 's1' followed by 's2'. The null terminator is added at the end of 
+ * the new string.
+ * If memory allocation fails or either input string is NULL, NULL is returned.
+ *
+ * @param s1 The first string.
+ * @param s2 The second string.
+ * @return char* A pointer to the new concatenated string, or NULL if 
+ * allocation fails.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;

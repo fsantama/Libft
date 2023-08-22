@@ -6,19 +6,25 @@
 /*   By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:45:28 by fsantama          #+#    #+#             */
-/*   Updated: 2023/08/22 17:15:27 by fsantama         ###   ########.fr       */
+/*   Updated: 2023/08/22 17:53:19 by fsantama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief 
- * 
- * @param s 
- * @param c 
- * @param n 
- * @return void* 
+ * @brief Locate the first occurrence of a byte in a memory area.
+ *
+ * This function searches for the first occurrence of the byte 'c' in the first 
+ * 'n' bytes of the memory area pointed to by 's'. If the byte is found, a 
+ * pointer to the matching byte in memory is returned; otherwise, NULL is 
+ * returned.
+ *
+ * @param s A pointer to the memory area to search.
+ * @param c The byte to be located.
+ * @param n The maximum number of bytes to search.
+ * @return void* A pointer to the first occurrence of 'c' in memory, or NULL 
+ * 		   if not found.
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
