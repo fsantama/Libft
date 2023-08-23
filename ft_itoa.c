@@ -6,7 +6,7 @@
 /*   By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:14:03 by fsantama          #+#    #+#             */
-/*   Updated: 2022/12/22 11:47:19 by fsantama         ###   ########.fr       */
+/*   Updated: 2023/08/22 16:27:04 by fsantama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,18 @@ static size_t	ft_intlen(long n)
 	return (counter);
 }
 
+/**
+ * @brief Convert an integer to its string representation.
+ *
+ * This function takes an integer as input and constructs a string 
+ * representation of the integer's value. The resulting string is allocated 
+ * dynamically, and the caller is responsible for freeing the allocated 
+ * memory when it's no longer needed.
+ *
+ * @param n The integer to be converted to a string.
+ * @return char* A dynamically allocated string representing the integer value.
+ *         It's the caller's responsibility to free the memory.
+ */
 char	*ft_itoa(int n)
 {
 	char	*str;

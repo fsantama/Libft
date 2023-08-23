@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantama <fsantama@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:21:08 by fsantama          #+#    #+#             */
-/*   Updated: 2023/01/10 13:02:32 by fsantama         ###   ########.fr       */
+/*   Updated: 2023/08/22 18:12:10 by fsantama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,21 @@ static char	**ft_make_cells(char **str, char *s, char c)
 	return (str);
 }
 
+/**
+* @brief Split a string into an array of substrings using a delimiter 
+* 		  character.
+*
+* This function splits the input string 's' into an array of substrings 
+* using the delimiter character 'c'. Memory is allocated for the array 
+* of pointers to substrings, as well as for the individual substrings. 
+* The final element of the array is set to NULL. The memory allocation 
+* can fail, in which case NULL is returned.
+*
+* @param s The string to be split.
+* @param c The delimiter character used for splitting.
+* @return char** An array of pointers to the substrings, or NULL if 
+* 	 	   allocation fails.
+*/
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
