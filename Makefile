@@ -6,7 +6,7 @@
 #    By: fsantama <fsantama@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 09:54:51 by fsantama          #+#    #+#              #
-#    Updated: 2023/08/22 17:18:09 by fsantama         ###   ########.fr        #
+#    Updated: 2023/09/08 11:02:16 by fsantama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,8 +81,8 @@ BNS_OBJS := $(BNS_SRC:.c=.o)
 
 all : $(NAME) 
 
-$(NAME):
-	@$(CC) $(CFLAGS) -c $(SRC)
+$(NAME):$(OBJS)
+#	$(CC) $(CFLAGS) -c $(SRC)
 	@ar rcs $(NAME) $(OBJS)
 	
 	@echo "$(CYAN) ======================================================="
@@ -123,7 +123,7 @@ $(NAME):
 	@echo "$(GREEN) $(NAME) make done ✅ $(DEFAULT)"
 
 %.o : %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: $(BNS_OBJS)
 	@ar rcs $(NAME) $(BNS_OBJS)
